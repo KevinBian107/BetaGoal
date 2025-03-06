@@ -12,11 +12,19 @@ pip install setuptools==66 wheel==0.38.4
 pip install --upgrade pip==22.0.2
 pip install soccer-twos
 pip install --upgrade numpy==1.26.4
-pip install requests  
+pip install requests
+pip install stable_baselines3
+pip install 'shimmy>=2.0'
 ```
 
 Then it gets tricky, we need to change an auto-detection of a path to absolute path, in this `/Users/kevinb/miniforge3/envs/beta_goal/lib/python3.9/site-packages/soccer_twos/__init__.py` file change `env_config["env_path"]` on line 66 and 71 to absolute path (use your own path):
 
 ```bash
 "/Users/kevinb/miniforge3/envs/beta_goal/lib/python3.9/site-packages/soccer_twos/bin/v2/mac_os/soccer-twos.app"
+```
+
+Run the following to check if the setup is correct:
+
+```bash
+python try_setup.py
 ```
